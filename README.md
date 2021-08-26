@@ -4,7 +4,7 @@ You have to set next steps:
   2. Rename that file to pre-commit, Remove the existing sample code.
   3. Paste this script:
    <br>
-```sh
+###
         #!/bin/bash
         STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep ".jsx\{0,1\}$")
         ESLINT="$(git rev-parse --show-toplevel)/node_modules/.bin/eslint"
@@ -36,7 +36,7 @@ You have to set next steps:
           printf "\033[42mCOMMIT SUCCEEDED\033[0m\n"
         fi
         exit $?
-```
+###
   4. Save file.
   5. Run `chmod +x .git/hooks/pre-commit` to make it an executable file.
   6. Voila!
